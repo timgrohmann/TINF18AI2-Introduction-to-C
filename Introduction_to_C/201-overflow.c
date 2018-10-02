@@ -8,23 +8,37 @@
 // TO DO 6 (optional): Check the CPU load when running the programm. What do you observe?
 
 #include <stdio.h>
+#include <time.h>
 
 int main201() {
     
     unsigned int c = 0, old_c; //TODO 1: other data types
+    long l = 0, old_l;
+    time_t start, end;
+    start = clock();
     
-    
-    while(1) {  // repeat the following code in { .... } endless
-        old_c=c; // remember previous value
-        c=c+1;   // increase c by 1, you may also use the short form: c++;
-        if(old_c>c) { // execute the following code in { ... } if condition is true
+    while(1) {
+        old_c=c;
+        c++;
+        if(old_c>c) {
             printf("overflow %u -> %u \n", old_c, c);
-            //return 0; //used to stop counting after first overflow
+            end = clock();
+            float time = (end-start) / (double) CLOCKS_PER_SEC;
+            printf("took %fs \n", time);
+            break; //used to stop counting after first overflow
         }
-        // printf format strings:
-        // char, short, int: "%d"
-        // long: "%ld"
-        // unsigned int: "%u"
+    }
+    
+    while(1) {
+        old_l=l;
+        l++;
+        if(old_l>l) {
+            printf("overflow for long %ld -> %ld \n", old_l, l);
+            end = clock();
+            float time = (end-start) / (double) CLOCKS_PER_SEC;
+            printf("took %fs \n", time);
+            break;
+        }
     }
     
     return 0;

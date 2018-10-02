@@ -1,6 +1,6 @@
 //
 //  main.c
-//  Introduction_to_C
+//  Introduction to C
 //
 //  Created by Tim Grohmann on 02.10.18.
 //  Copyright © 2018 Tim Grohmann. All rights reserved.
@@ -14,5 +14,5 @@ int main202(void);
 int main203(void);
 
 int main() {
-    main203();
+    main201();
 }
