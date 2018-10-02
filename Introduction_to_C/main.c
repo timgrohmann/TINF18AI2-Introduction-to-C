@@ -8,7 +8,11 @@
 
 #include <stdio.h>
 
+//Functions from other files
+int main201(void);
+int main202(void);
+int main203(void);
+
 int main() {
-    printf("Hello, World!\n");
-    return 0;
+    main201();
 }
