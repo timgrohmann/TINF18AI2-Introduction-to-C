@@ -12,7 +12,10 @@
 int main201(void);
 int main202(void);
 int main203(void);
+int main204(void);
+int main205(void);
+int main206(void);
 
 int main() {
-    main201();
+    main206();
 }

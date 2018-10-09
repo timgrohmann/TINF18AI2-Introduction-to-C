@@ -21,11 +21,11 @@ int main202() {
     
     while(1) {
         old_f = f;    //old_d=d;
-        f = f+adder;  //d=d*2;
+        f += adder;  //d=d*2;
         
         
         if(old_f>=f) {
-            printf("float limit %e -> %e \n", old_f, f);
+            printf("float limit %e for adder %e \n", f, adder);
             adder *= 2;
             if (f == INFINITY) {
                 return 0;
